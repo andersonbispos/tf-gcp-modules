@@ -6,7 +6,6 @@ variable "name" {
 variable "auto_create_subnetworks" {
   type        = bool
   description = "Define se devem ser criadas as subnets. Default: false"
-  default     = false
 }
 
 variable "description" {
