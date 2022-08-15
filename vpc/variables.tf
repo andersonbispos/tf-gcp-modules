@@ -1,16 +1,23 @@
-variable "name" {
-  type        = string
-  description = "Deverá ser adicionado um descrição para sua rede"
-}
-
 variable "auto_create_subnetworks" {
+  description = "Definie se devem ser criadas subnets automaticamente"
   type        = bool
-  description = "Define se devem ser criadas as subnets. Default: false"
 }
 
-variable "description" {
+variable "vpc_project" {
+  description = "Projeto da GCP onde a rede sera criada"
   type        = string
-  description = "Coloque um nome que aparecerá no dashboard para sua rede"
-  default     = "VPC criada via modulo"
 }
+
+variable "vpc_name" {
+  description = "Nome da VPC"
+  type        = string
+  default     = "vpc_module"
+}
+
+variable "vpc_description" {
+  description = "Descricao da finalidade da VPC"
+  type        = string
+  default     = "vpc de exemplo de modulos"
+}
+
 
