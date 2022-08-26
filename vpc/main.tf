@@ -17,8 +17,12 @@ resource "google_compute_firewall" "allow_icmp_default" {
 
   allow {
     protocol = "tcp"
-    ports    = ["22", "80"]
+    ports    = ["22"]
   }
 
   source_ranges = ["0.0.0.0/0"]
+
+ /* lifecycle {
+   replace_triggered_by =[ google_compute_network.vpc_module ]
+ } */
 }

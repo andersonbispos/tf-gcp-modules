@@ -11,7 +11,7 @@ variable "vpc_project" {
 variable "vpc_name" {
   description = "Nome da VPC"
   type        = string
-  default     = "vpc_module"
+  default     = "vpc-module"
 }
 
 variable "vpc_description" {
